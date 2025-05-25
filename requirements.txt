@@ -1,3 +1,4 @@
+openai
 azure-ai-projects
 azure-ai-inference[prompts]
 azure-identity
