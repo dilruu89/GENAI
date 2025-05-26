@@ -1,9 +1,11 @@
 from openai import OpenAI
 import streamlit as st
 import os
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
-# client = OpenAI()
-# openai.api_key = st.secrets["OPENAI_API_KEY"]
+
+st.write(
+    "Has environment variables been set:",
+    os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"],
+)
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def get_meeting_insights(transcript, model = "gpt-3.5-turbo"):
